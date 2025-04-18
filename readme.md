@@ -1,11 +1,16 @@
-# Desktop Assistant  
+# Desktop Assistant
 
-A simple voice assistant that listens to your commands using your mic as input source and responds using text-to-speech.
+A simple voice assistant that listens to your commands using your mic as the input source and responds using text-to-speech. It can perform tasks like checking the weather, providing the current date and time, and answering queries using AI-powered responses.
 
 ## Features
-- Listens for spoken commands
-- Provides verbal responses
-- Exits on keywords like "exit", "quit", etc.
+
+- **Voice Command Recognition**: Listens for and processes spoken commands using your microphone.
+- **Text-to-Speech**: Provides verbal responses to the user.
+- **Weather Information**: Retrieve current weather information (customizable city).
+- **Current Date and Time**: Returns the current date, time, or both.
+- **AI-powered Responses**: Responds to user queries with AI-generated answers using Mistral AI.
+- **Exit Commands**: Exits or stops the assistant when keywords like `exit`, `quit`, `stop`, etc., are spoken.
+
 
 ## Installation
 
@@ -27,7 +32,20 @@ cd DesktopAssistant
 pip install -r requirements.txt
 ```
 
-### 4. Run the assistant
+### 4. Setup Environment variables
+You can obtain the necessary API keys from the following services:
+- [Hugging Face API Token](https://huggingface.com/settings/tokens)
+- [Weather API Key](https://www.weatherapi.com/my)
+
+Create a `.env` file in the root of the project and add the following:
+```
+HF_TOKEN=your_huggingface_api_token
+WEATHER_API_KEY=your_weather_api_key
+```
+
+
+### 5. Run the assistant
 ```
 python main.py
 ```
+
