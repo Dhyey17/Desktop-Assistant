@@ -10,7 +10,7 @@ def get_weather(city):
 
     url = f"https://api.weatherapi.com/v1/current.json?key={api_key}&q={city}&aqi=yes"
     try:
-        res = requests.get(url)
+        res = requests.get(url, timeout=60)
         data = res.json()
 
         if "error" in data:
