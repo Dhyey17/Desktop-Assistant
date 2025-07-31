@@ -1,6 +1,6 @@
 import os
-import requests
 from dotenv import load_dotenv
+from security import safe_requests
 
 load_dotenv()
 
@@ -10,7 +10,7 @@ def get_weather(city):
 
     url = f"https://api.weatherapi.com/v1/current.json?key={api_key}&q={city}&aqi=yes"
     try:
-        res = requests.get(url)
+        res = safe_requests.get(url)
         data = res.json()
 
         if "error" in data:
