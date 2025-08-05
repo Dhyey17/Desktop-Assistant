@@ -18,4 +18,3 @@ if __name__ == "__main__":
 
 # todo: active memory
 # todo: passive memory
-

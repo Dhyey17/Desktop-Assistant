@@ -60,5 +60,3 @@ def get_weather(city):
 
     except Exception as e:
         return f"Error getting weather: {e}"
-
-print(get_weather("Pune"))
