@@ -14,7 +14,7 @@ def handle_command(text: str) -> str:
         exit()
 
     elif "weather" in text:
-        return get_weather("Pune")
+        return get_weather("Vadodara")
 
     elif "time" in text and "date" in text:
         return f"{get_date()} {get_time()}"
